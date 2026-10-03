@@ -20,6 +20,10 @@ import ROICalculatorPage from './pages/ROICalculatorPage';
 import ResponseCheckerPage from './pages/ResponseCheckerPage';
 import SupportTemplatesPage from './pages/SupportTemplatesPage';
 import EmbedPage from './pages/EmbedPage';
+import ToolsIndexPage from './pages/ToolsIndexPage';
+import FAQGeneratorPage from './pages/FAQGeneratorPage';
+import KBTemplatePage from './pages/KBTemplatePage';
+import TicketPriorityMatrixPage from './pages/TicketPriorityMatrixPage';
 import BlogLayout, { BlogIndex } from './pages/BlogLayout';
 import ResponseTimeGuide from './pages/blog/ResponseTimeGuide';
 import KnowledgeBaseGuide from './pages/blog/KnowledgeBaseGuide';
@@ -44,6 +48,10 @@ export default function App() {
       <Route path="/templates-gallery" element={<SupportTemplatesPage />} />
       <Route path="/calculator" element={<ROICalculatorPage />} />
       <Route path="/embed" element={<EmbedPage />} />
+      <Route path="/tools" element={<ToolsIndexPage />} />
+      <Route path="/tools/faq-generator" element={<FAQGeneratorPage />} />
+      <Route path="/tools/kb-template" element={<KBTemplatePage />} />
+      <Route path="/tools/priority-matrix" element={<TicketPriorityMatrixPage />} />
       <Route path="/blog" element={<BlogLayout />}>
         <Route index element={<BlogIndex />} />
         <Route path="customer-support-response-time-guide" element={<ResponseTimeGuide />} />

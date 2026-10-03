@@ -55,3 +55,48 @@ body {
 input, textarea, select {
   font-family: inherit;
 }
+
+/* Tool pages */
+.tool-page { min-height: 100vh; background: var(--color-bg); }
+.tool-main { max-width: 720px; margin: 0 auto; padding: 2rem 1rem; }
+.tool-container { display: flex; flex-direction: column; gap: 2rem; }
+.tool-title { font-size: 2rem; font-weight: 800; color: var(--color-text); margin: 0; }
+.tool-subtitle { color: var(--color-text-secondary); margin: 0; line-height: 1.6; }
+
+.tools-nav { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-border); background: var(--color-bg); flex-wrap: wrap; }
+.tools-nav-brand { font-weight: 700; color: #F0B429; text-decoration: none; font-size: 1rem; white-space: nowrap; }
+.tools-nav-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tools-nav-link { text-decoration: none; font-size: 0.85rem; padding: 0.35rem 0.75rem; border-radius: 6px; color: var(--color-text-secondary); transition: background 0.15s; }
+.tools-nav-link:hover, .tools-nav-link.active { background: var(--color-surface-hover); color: var(--color-text); }
+.tools-nav-cta { margin-left: auto; font-size: 0.85rem; padding: 0.4rem 1rem; background: #F0B429; color: #0A0A0B; border-radius: 6px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+
+.calc-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.calc-label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 500; color: var(--color-text); }
+.calc-input { padding: 0.65rem 0.85rem; border: 1px solid var(--color-border); border-radius: 8px; font-size: 1rem; background: var(--color-bg); color: var(--color-text); outline: none; }
+.calc-input:focus { border-color: #F0B429; box-shadow: 0 0 0 3px rgba(240,180,41,0.15); }
+.calc-result { border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.calc-result-row { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--color-text-secondary); }
+.calc-result-row strong { color: var(--color-text); }
+.calc-total { font-size: 1.05rem; }
+.calc-total strong { color: #F0B429; }
+
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.tool-card { display: flex; flex-direction: column; gap: 0.25rem; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; text-decoration: none; color: var(--color-text); transition: border-color 0.15s, transform 0.15s; background: var(--color-surface); }
+.tool-card:hover { border-color: #F0B429; transform: translateY(-2px); }
+.tool-card-icon { font-size: 1.75rem; }
+.tool-card-title { font-size: 1rem; font-weight: 600; margin: 0; }
+.tool-card-desc { font-size: 0.82rem; color: var(--color-text-secondary); margin: 0; }
+
+.share-buttons { display: flex; align-items: center; gap: 0.75rem; padding-top: 0.75rem; flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; color: var(--color-text-secondary); text-decoration: none; cursor: pointer; background: none; border: none; padding: 0.3rem 0.5rem; border-radius: 4px; transition: color 0.15s; }
+.share-btn:hover { color: #F0B429; }
+
+.tool-info { display: flex; flex-direction: column; gap: 0.75rem; }
+.tool-info h2 { font-size: 1.25rem; font-weight: 700; color: var(--color-text); margin: 0; }
+.tool-info h3 { font-size: 1rem; font-weight: 600; color: var(--color-text); margin: 0; }
+.tool-info p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+.tool-info ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.8; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: none; transition: background 0.15s; }
+.btn-primary { background: #F0B429; color: #0A0A0B; }
+.btn-primary:hover { background: #d4a024; }
