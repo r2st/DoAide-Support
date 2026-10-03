@@ -13,7 +13,7 @@ build/
 node_modules/
 frontend/dist/
 
-keys/.env
+keys/*.env
 !keys/.env.example
 
 .vscode/
