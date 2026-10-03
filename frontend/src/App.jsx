@@ -16,6 +16,14 @@ import CannedResponsesPage from './pages/CannedResponsesPage';
 import SLAConfigPage from './pages/SLAConfigPage';
 import ReportsPage from './pages/ReportsPage';
 import SettingsPage from './pages/SettingsPage';
+import ROICalculatorPage from './pages/ROICalculatorPage';
+import ResponseCheckerPage from './pages/ResponseCheckerPage';
+import SupportTemplatesPage from './pages/SupportTemplatesPage';
+import EmbedPage from './pages/EmbedPage';
+import BlogLayout, { BlogIndex } from './pages/BlogLayout';
+import ResponseTimeGuide from './pages/blog/ResponseTimeGuide';
+import KnowledgeBaseGuide from './pages/blog/KnowledgeBaseGuide';
+import SupportMetricsGuide from './pages/blog/SupportMetricsGuide';
 
 function ProtectedRoute() {
   const { isAuthenticated, loading } = useAuth();
@@ -32,6 +40,16 @@ export default function App() {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/pricing" element={<PricingPage />} />
       <Route path="/portal" element={<CustomerPortalPage />} />
+      <Route path="/checker" element={<ResponseCheckerPage />} />
+      <Route path="/templates-gallery" element={<SupportTemplatesPage />} />
+      <Route path="/calculator" element={<ROICalculatorPage />} />
+      <Route path="/embed" element={<EmbedPage />} />
+      <Route path="/blog" element={<BlogLayout />}>
+        <Route index element={<BlogIndex />} />
+        <Route path="customer-support-response-time-guide" element={<ResponseTimeGuide />} />
+        <Route path="building-a-knowledge-base-that-works" element={<KnowledgeBaseGuide />} />
+        <Route path="support-metrics-csat-nps-ces" element={<SupportMetricsGuide />} />
+      </Route>
 
       <Route element={<ProtectedRoute />}>
         <Route path="/dashboard" element={<DashboardPage />} />
