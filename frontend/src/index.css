@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0f0f11;
+  --color-surface: #1a1a1f;
+  --color-surface-hover: #25252b;
+  --color-border: #2a2a32;
+  --color-text: #f0f0f2;
+  --color-text-secondary: #9898a0;
+  --color-primary: #e11d48;
+  --color-primary-hover: #be123c;
+}
+
+.light {
+  --color-bg: #f8f8fa;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0f0f2;
+  --color-border: #e2e2e8;
+  --color-text: #1a1a1f;
+  --color-text-secondary: #6b6b78;
+  --color-primary: #e11d48;
+  --color-primary-hover: #be123c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 3px;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
