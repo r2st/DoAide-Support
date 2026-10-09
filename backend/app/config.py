@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
 
     OPENROUTER_API_KEY: str = ""
+    GEMINI_API_KEY: str = ""
 
     SMTP_HOST: str = "smtp.gmail.com"
     SMTP_PORT: int = 587

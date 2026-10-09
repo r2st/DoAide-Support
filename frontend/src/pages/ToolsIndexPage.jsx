@@ -9,6 +9,10 @@ const TOOLS = [
   { path: "/tools/faq-generator", title: "FAQ Generator", description: "Generate a structured FAQ from your product or service description.", icon: "❓" },
   { path: "/tools/kb-template", title: "Knowledge Base Template", description: "Create a ready-to-use knowledge base article template.", icon: "📖" },
   { path: "/tools/priority-matrix", title: "Ticket Priority Matrix", description: "Build a priority matrix to triage support tickets consistently.", icon: "🎯" },
+  { path: "/tools/ticket-template", title: "Ticket Template Generator", description: "Generate structured ticket templates for bug reports, feature requests, and more.", icon: "🎫" },
+  { path: "/tools/sla-calculator", title: "SLA Calculator", description: "Define SLA targets, calculate business-hours deadlines, and measure compliance.", icon: "⏱️" },
+  { path: "/tools/csat-survey", title: "CSAT Survey Creator", description: "Build CSAT, NPS, or CES satisfaction surveys for your support team.", icon: "📊" },
+  { path: "/tools/response-time-analyzer", title: "Response Time Analyzer", description: "Benchmark your response times against industry standards by channel.", icon: "📈" },
 ];
 
 export default function ToolsIndexPage() {

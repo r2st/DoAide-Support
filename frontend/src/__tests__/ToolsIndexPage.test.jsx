@@ -18,6 +18,10 @@ describe("ToolsIndexPage", () => {
     expect(screen.getByText("Ticket Priority Matrix")).toBeInTheDocument();
     expect(screen.getByText("Response Quality Checker")).toBeInTheDocument();
     expect(screen.getByText("Support ROI Calculator")).toBeInTheDocument();
+    expect(screen.getByText("Ticket Template Generator")).toBeInTheDocument();
+    expect(screen.getByText("SLA Calculator")).toBeInTheDocument();
+    expect(screen.getByText("CSAT Survey Creator")).toBeInTheDocument();
+    expect(screen.getByText("Response Time Analyzer")).toBeInTheDocument();
   });
 
   it("renders tool cards as links", () => {

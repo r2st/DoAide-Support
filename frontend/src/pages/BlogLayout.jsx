@@ -16,6 +16,21 @@ const ARTICLES = [
     title: "CSAT vs NPS vs CES — Which Support Metric Should You Track?",
     description: "Compare the three most common customer satisfaction metrics. When to use each one, how to calculate them, and benchmarks by industry.",
   },
+  {
+    slug: "ticket-deflection-strategies",
+    title: "Ticket Deflection Strategies — Reduce Support Volume Without Losing Quality",
+    description: "Practical strategies to deflect 20-50% of support tickets through self-service, AI chatbots, and smart contact forms while maintaining customer satisfaction.",
+  },
+  {
+    slug: "sla-best-practices-guide",
+    title: "SLA Best Practices — Setting and Meeting Service Level Agreements",
+    description: "How to set realistic SLA targets, build escalation rules, and track compliance. Includes priority-based SLA templates and anti-patterns to avoid.",
+  },
+  {
+    slug: "ai-customer-support-guide",
+    title: "AI in Customer Support — A Practical Guide for 2026",
+    description: "Where AI delivers the most ROI in support, a phased implementation playbook, and common mistakes to avoid. From agent assist to self-service chatbots.",
+  },
 ];
 
 export { ARTICLES };

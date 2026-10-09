@@ -24,10 +24,17 @@ import ToolsIndexPage from './pages/ToolsIndexPage';
 import FAQGeneratorPage from './pages/FAQGeneratorPage';
 import KBTemplatePage from './pages/KBTemplatePage';
 import TicketPriorityMatrixPage from './pages/TicketPriorityMatrixPage';
+import TicketTemplateGeneratorPage from './pages/TicketTemplateGeneratorPage';
+import SLACalculatorPage from './pages/SLACalculatorPage';
+import CSATSurveyCreatorPage from './pages/CSATSurveyCreatorPage';
+import ResponseTimeAnalyzerPage from './pages/ResponseTimeAnalyzerPage';
 import BlogLayout, { BlogIndex } from './pages/BlogLayout';
 import ResponseTimeGuide from './pages/blog/ResponseTimeGuide';
 import KnowledgeBaseGuide from './pages/blog/KnowledgeBaseGuide';
 import SupportMetricsGuide from './pages/blog/SupportMetricsGuide';
+import TicketDeflectionGuide from './pages/blog/TicketDeflectionGuide';
+import SLABestPracticesGuide from './pages/blog/SLABestPracticesGuide';
+import AICustomerSupportGuide from './pages/blog/AICustomerSupportGuide';
 
 function ProtectedRoute() {
   const { isAuthenticated, loading } = useAuth();
@@ -52,11 +59,18 @@ export default function App() {
       <Route path="/tools/faq-generator" element={<FAQGeneratorPage />} />
       <Route path="/tools/kb-template" element={<KBTemplatePage />} />
       <Route path="/tools/priority-matrix" element={<TicketPriorityMatrixPage />} />
+      <Route path="/tools/ticket-template" element={<TicketTemplateGeneratorPage />} />
+      <Route path="/tools/sla-calculator" element={<SLACalculatorPage />} />
+      <Route path="/tools/csat-survey" element={<CSATSurveyCreatorPage />} />
+      <Route path="/tools/response-time-analyzer" element={<ResponseTimeAnalyzerPage />} />
       <Route path="/blog" element={<BlogLayout />}>
         <Route index element={<BlogIndex />} />
         <Route path="customer-support-response-time-guide" element={<ResponseTimeGuide />} />
         <Route path="building-a-knowledge-base-that-works" element={<KnowledgeBaseGuide />} />
         <Route path="support-metrics-csat-nps-ces" element={<SupportMetricsGuide />} />
+        <Route path="ticket-deflection-strategies" element={<TicketDeflectionGuide />} />
+        <Route path="sla-best-practices-guide" element={<SLABestPracticesGuide />} />
+        <Route path="ai-customer-support-guide" element={<AICustomerSupportGuide />} />
       </Route>
 
       <Route element={<ProtectedRoute />}>

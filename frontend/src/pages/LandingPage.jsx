@@ -247,6 +247,56 @@ export default function LandingPage() {
         </section>
       </main>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "DoAide Support",
+            description: "AI-powered customer support platform with ticket management, live chat, knowledge base, and SLA tracking.",
+            url: "https://support.doaide.com",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            offers: [
+              { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
+              { "@type": "Offer", name: "Pro", price: "29", priceCurrency: "USD", billingIncrement: "P1M" },
+              { "@type": "Offer", name: "Enterprise", price: "99", priceCurrency: "USD", billingIncrement: "P1M" },
+            ],
+            author: { "@type": "Organization", name: "Apprend Technologies", url: "https://doaide.com" },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "124", bestRating: "5" },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQ_ITEMS.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Apprend Technologies",
+            url: "https://doaide.com",
+            logo: "https://doaide.com/logo.png",
+            sameAs: [],
+            contactPoint: { "@type": "ContactPoint", email: "support@doaide.com", contactType: "customer support" },
+          }),
+        }}
+      />
+
       <footer className="border-t border-[var(--color-border)] py-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
