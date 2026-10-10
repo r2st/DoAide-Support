@@ -31,6 +31,21 @@ const ARTICLES = [
     title: "AI in Customer Support — A Practical Guide for 2026",
     description: "Where AI delivers the most ROI in support, a phased implementation playbook, and common mistakes to avoid. From agent assist to self-service chatbots.",
   },
+  {
+    slug: "best-helpdesk-software-india",
+    title: "Best Helpdesk Software for Indian Businesses in 2026",
+    description: "A comprehensive guide to choosing helpdesk software for Indian businesses — comparing features, INR pricing, multilingual support, and data residency options.",
+  },
+  {
+    slug: "ticket-management-system-india",
+    title: "Ticket Management System Guide for Indian Startups and SMBs",
+    description: "Complete guide to implementing a ticket management system for Indian startups — from choosing the right tool to configuring workflows, SLAs, and automation.",
+  },
+  {
+    slug: "customer-service-automation-ecommerce-india",
+    title: "Customer Service Automation for Indian E-Commerce — A Complete Guide",
+    description: "How Indian e-commerce businesses can automate customer service with WhatsApp chatbots, self-service knowledge bases, and COD-specific workflows.",
+  },
 ];
 
 export { ARTICLES };

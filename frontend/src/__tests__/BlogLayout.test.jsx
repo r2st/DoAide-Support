@@ -25,6 +25,6 @@ describe("BlogIndex", () => {
       </MemoryRouter>,
     );
     const links = screen.getAllByText(/Read more/);
-    expect(links).toHaveLength(6);
+    expect(links).toHaveLength(9);
   });
 });

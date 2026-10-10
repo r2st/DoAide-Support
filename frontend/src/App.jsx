@@ -35,6 +35,9 @@ import SupportMetricsGuide from './pages/blog/SupportMetricsGuide';
 import TicketDeflectionGuide from './pages/blog/TicketDeflectionGuide';
 import SLABestPracticesGuide from './pages/blog/SLABestPracticesGuide';
 import AICustomerSupportGuide from './pages/blog/AICustomerSupportGuide';
+import HelpdeskSoftwareIndiaGuide from './pages/blog/HelpdeskSoftwareIndiaGuide';
+import TicketManagementIndiaGuide from './pages/blog/TicketManagementIndiaGuide';
+import CustomerServiceEcommerceIndiaGuide from './pages/blog/CustomerServiceEcommerceIndiaGuide';
 
 function ProtectedRoute() {
   const { isAuthenticated, loading } = useAuth();
@@ -71,6 +74,9 @@ export default function App() {
         <Route path="ticket-deflection-strategies" element={<TicketDeflectionGuide />} />
         <Route path="sla-best-practices-guide" element={<SLABestPracticesGuide />} />
         <Route path="ai-customer-support-guide" element={<AICustomerSupportGuide />} />
+        <Route path="best-helpdesk-software-india" element={<HelpdeskSoftwareIndiaGuide />} />
+        <Route path="ticket-management-system-india" element={<TicketManagementIndiaGuide />} />
+        <Route path="customer-service-automation-ecommerce-india" element={<CustomerServiceEcommerceIndiaGuide />} />
       </Route>
 
       <Route element={<ProtectedRoute />}>
