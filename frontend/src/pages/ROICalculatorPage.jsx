@@ -81,7 +81,7 @@ export default function ROICalculatorPage() {
               <input type="range" value={automationRate} onChange={(e) => setAutomationRate(parseInt(e.target.value, 10))} min="10" max="80" step="5" style={{ width: "100%", marginTop: "0.4rem" }} />
               <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", color: "#9CA3AF" }}>
                 <span>10%</span>
-                <strong style={{ color: "#F0B429" }}>{automationRate}%</strong>
+                <strong style={{ color: "#0D9488" }}>{automationRate}%</strong>
                 <span>80%</span>
               </div>
             </label>

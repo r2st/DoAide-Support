@@ -20,23 +20,6 @@ const DOAIDE_PRODUCTS = [
   { name: "Trade", url: "https://trade.doaide.com" },
 ];
 
-function RobotFace({ size = 32, color = "#F0B429" }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">
-      <line x1="16" y1="6" x2="16" y2="2" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="16" cy="1.5" r="1.5" fill={color} />
-      <rect x="5" y="6" width="22" height="17" rx="5" fill={color} />
-      <ellipse cx="11" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <ellipse cx="21" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <circle cx="11.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <circle cx="21.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <path d="M12 19Q16 22 20 19" stroke="#0A0A0B" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-      <rect x="1" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-      <rect x="27" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-    </svg>
-  );
-}
-
 const features = [
   { icon: Ticket, title: 'Ticket Management', desc: 'Create, assign, prioritize, and resolve support tickets with powerful filtering and custom workflows.' },
   { icon: Bot, title: 'AI Auto-Response', desc: 'AI suggests replies based on your knowledge base articles and similar past resolutions. Respond faster.' },
@@ -91,7 +74,7 @@ function FaqSection() {
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 >
                   {item.q}
-                  <span className="ml-4 text-[#F0B429] text-xl flex-shrink-0">{openIndex === i ? "−" : "+"}</span>
+                  <span className="ml-4 text-teal-600 text-xl flex-shrink-0">{openIndex === i ? "−" : "+"}</span>
                 </button>
               </dt>
               {openIndex === i && (
@@ -108,18 +91,17 @@ function FaqSection() {
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
-      <header className="border-b border-[var(--color-border)]">
+      <header className="border-b border-[var(--color-border)] bg-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <a href="https://doaide.com" className="flex items-center gap-2.5 no-underline">
-            <RobotFace size={28} color="#F0B429" />
-            <span className="text-xl font-bold text-[var(--color-text)]">
-              DoAide <span className="text-[#F0B429]">Support</span>
+            <span className="text-xl font-bold text-white">
+              DoAide <span className="text-teal-100">| Support</span>
             </span>
           </a>
           <div className="flex items-center gap-4">
-            <Link to="/pricing" className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] no-underline">Pricing</Link>
-            <Link to="/login" className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] no-underline">Sign In</Link>
-            <Link to="/register" className="px-4 py-2 bg-[#F0B429] text-[#0A0A0B] text-sm font-semibold rounded-lg hover:bg-[#D4A017] transition-colors no-underline">
+            <Link to="/pricing" className="text-sm text-teal-100 hover:text-white no-underline">Pricing</Link>
+            <Link to="/login" className="text-sm text-teal-100 hover:text-white no-underline">Sign In</Link>
+            <Link to="/register" className="px-4 py-2 bg-white text-teal-700 text-sm font-semibold rounded-lg hover:bg-teal-50 transition-colors no-underline">
               Get Started
             </Link>
           </div>
@@ -130,7 +112,7 @@ export default function LandingPage() {
         <section className="py-20 sm:py-28 px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-[#F0B429]">AI-Powered</span>
+              <span className="text-teal-600">AI-Powered</span>
               <br />
               <span className="text-[var(--color-text)]">Customer Support</span>
             </h1>
@@ -139,7 +121,7 @@ export default function LandingPage() {
               and a self-service knowledge base. Everything your support team needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/register" className="px-8 py-3.5 bg-[#F0B429] text-[#0A0A0B] text-lg font-semibold rounded-lg hover:bg-[#D4A017] transition-colors no-underline">
+              <Link to="/register" className="px-8 py-3.5 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 transition-colors no-underline">
                 Get Started Free
               </Link>
               <Link to="/portal" className="px-8 py-3.5 border border-[var(--color-border)] text-[var(--color-text)] text-lg rounded-lg hover:bg-[var(--color-surface)] transition-colors no-underline">
@@ -159,9 +141,9 @@ export default function LandingPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[#F0B429]/30 transition-colors">
-                  <div className="h-10 w-10 rounded-lg bg-[#F0B429]/10 flex items-center justify-center mb-4">
-                    <Icon className="h-5 w-5 text-[#F0B429]" />
+                <div key={title} className="p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] hover:border-teal-600/30 transition-colors">
+                  <div className="h-10 w-10 rounded-lg bg-teal-600/10 flex items-center justify-center mb-4">
+                    <Icon className="h-5 w-5 text-teal-600" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-[var(--color-text)]">{title}</h3>
                   <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{desc}</p>
@@ -177,7 +159,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {HOW_IT_WORKS.map((s) => (
                 <div key={s.step} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#F0B429] text-[#0A0A0B] text-xl font-bold flex items-center justify-center mx-auto mb-4">{s.step}</div>
+                  <div className="w-12 h-12 rounded-full bg-teal-600 text-white text-xl font-bold flex items-center justify-center mx-auto mb-4">{s.step}</div>
                   <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">{s.title}</h3>
                   <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{s.desc}</p>
                 </div>
@@ -192,8 +174,8 @@ export default function LandingPage() {
             <p className="text-[var(--color-text-secondary)] text-center mb-14">Start free. Upgrade when you need more.</p>
             <div className="grid md:grid-cols-3 gap-8">
               {plans.map((plan) => (
-                <div key={plan.name} className={`p-8 rounded-xl border ${plan.featured ? 'border-[#F0B429] ring-2 ring-[#F0B429]/20' : 'border-[var(--color-border)]'} bg-[var(--color-surface)]`}>
-                  {plan.featured && <p className="text-xs font-semibold text-[#F0B429] uppercase tracking-wide mb-2">Most Popular</p>}
+                <div key={plan.name} className={`p-8 rounded-xl border ${plan.featured ? 'border-teal-600 ring-2 ring-teal-600/20' : 'border-[var(--color-border)]'} bg-[var(--color-surface)]`}>
+                  {plan.featured && <p className="text-xs font-semibold text-teal-600 uppercase tracking-wide mb-2">Most Popular</p>}
                   <h3 className="text-xl font-bold text-[var(--color-text)]">{plan.name}</h3>
                   <p className="text-sm text-[var(--color-text-secondary)] mt-1">{plan.desc}</p>
                   <div className="mt-4 mb-6">
@@ -203,12 +185,12 @@ export default function LandingPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                        <Check className="h-4 w-4 text-[#F0B429] flex-shrink-0" />
+                        <Check className="h-4 w-4 text-teal-600 flex-shrink-0" />
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <Link to="/register" className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-colors no-underline ${plan.featured ? 'bg-[#F0B429] text-[#0A0A0B] hover:bg-[#D4A017]' : 'border border-[var(--color-border)] text-[var(--color-text)] hover:bg-[var(--color-surface)]'}`}>
+                  <Link to="/register" className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-colors no-underline ${plan.featured ? 'bg-teal-600 text-white hover:bg-teal-700' : 'border border-[var(--color-border)] text-[var(--color-text)] hover:bg-[var(--color-surface)]'}`}>
                     {plan.cta}
                   </Link>
                 </div>
@@ -241,7 +223,7 @@ export default function LandingPage() {
         <section className="py-20 px-4 sm:px-6 text-center border-t border-[var(--color-border)]">
           <h2 className="text-3xl font-bold text-[var(--color-text)] mb-4">Ready to Transform Your Customer Support?</h2>
           <p className="text-[var(--color-text-secondary)] mb-8 max-w-lg mx-auto">Start resolving tickets faster today. Free forever for up to 100 tickets per month.</p>
-          <Link to="/register" className="inline-block px-8 py-3.5 bg-[#F0B429] text-[#0A0A0B] text-lg font-semibold rounded-lg hover:bg-[#D4A017] transition-colors no-underline">
+          <Link to="/register" className="inline-block px-8 py-3.5 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 transition-colors no-underline">
             Get Started Free
           </Link>
         </section>
@@ -303,32 +285,33 @@ export default function LandingPage() {
             <div>
               <h4 className="text-sm font-semibold text-[var(--color-text)] mb-3">Product</h4>
               <div className="space-y-2 text-sm">
-                <Link to="/pricing" className="block text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline">Pricing</Link>
-                <a href="#features-heading" className="block text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("features-heading")?.scrollIntoView({ behavior: "smooth" }); }}>Features</a>
-                <a href="#faq-heading" className="block text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("faq-heading")?.scrollIntoView({ behavior: "smooth" }); }}>FAQ</a>
+                <Link to="/pricing" className="block text-[var(--color-text-secondary)] hover:text-teal-600 no-underline">Pricing</Link>
+                <a href="#features-heading" className="block text-[var(--color-text-secondary)] hover:text-teal-600 no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("features-heading")?.scrollIntoView({ behavior: "smooth" }); }}>Features</a>
+                <a href="#faq-heading" className="block text-[var(--color-text-secondary)] hover:text-teal-600 no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("faq-heading")?.scrollIntoView({ behavior: "smooth" }); }}>FAQ</a>
               </div>
             </div>
             <div>
               <h4 className="text-sm font-semibold text-[var(--color-text)] mb-3">Company</h4>
               <div className="space-y-2 text-sm">
-                <a href="https://doaide.com" className="block text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline">About DoAide</a>
-                <a href="mailto:support@doaide.com" className="block text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline">Contact</a>
+                <a href="https://doaide.com" className="block text-[var(--color-text-secondary)] hover:text-teal-600 no-underline">About DoAide</a>
+                <a href="mailto:support@doaide.com" className="block text-[var(--color-text-secondary)] hover:text-teal-600 no-underline">Contact</a>
               </div>
             </div>
             <div className="col-span-2">
               <h4 className="text-sm font-semibold text-[var(--color-text)] mb-3">DoAide Products</h4>
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                 {DOAIDE_PRODUCTS.map((p) => (
-                  <a key={p.name} href={p.url} className="text-[var(--color-text-secondary)] hover:text-[#F0B429] no-underline">{p.name}</a>
+                  <a key={p.name} href={p.url} className="text-[var(--color-text-secondary)] hover:text-teal-600 no-underline">{p.name}</a>
                 ))}
               </div>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-[var(--color-border)]">
-            <a href="https://doaide.com" className="flex items-center gap-2 no-underline">
-              <RobotFace size={16} color="#F0B429" />
-              <span className="text-sm text-[var(--color-text-secondary)]">doaide.com</span>
-            </a>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium text-teal-600">A DoAide Product</span>
+              <span className="text-[var(--color-text-secondary)]">·</span>
+              <a href="https://doaide.com" className="text-sm text-[var(--color-text-secondary)] hover:text-teal-600 no-underline">doaide.com</a>
+            </div>
             <span className="text-sm text-[var(--color-text-secondary)]">&copy; {new Date().getFullYear()} DoAide. All rights reserved.</span>
           </div>
         </div>

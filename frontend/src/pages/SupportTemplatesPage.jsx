@@ -73,15 +73,15 @@ export default function SupportTemplatesPage() {
                         borderRadius: "999px",
                         fontSize: "0.75rem",
                         fontWeight: 600,
-                        background: "rgba(240,180,41,0.1)",
-                        color: "#F0B429",
+                        background: "rgba(13,148,136,0.1)",
+                        color: "#0D9488",
                       }}
                     >
                       {s}
                     </span>
                   ))}
                 </div>
-                <div style={{ padding: "0.75rem", borderRadius: "6px", background: "rgba(10,10,11,0.5)", fontSize: "0.85rem", color: "#9CA3AF", lineHeight: 1.5, fontStyle: "italic", marginBottom: "0.75rem" }}>
+                <div style={{ padding: "0.75rem", borderRadius: "6px", background: "var(--color-bg)", fontSize: "0.85rem", color: "#9CA3AF", lineHeight: 1.5, fontStyle: "italic", marginBottom: "0.75rem" }}>
                   {t.example}
                 </div>
                 <Link
@@ -90,8 +90,8 @@ export default function SupportTemplatesPage() {
                     display: "inline-block",
                     padding: "0.4rem 1rem",
                     borderRadius: "6px",
-                    background: "#F0B429",
-                    color: "#0A0A0B",
+                    background: "#0D9488",
+                    color: "#ffffff",
                     fontWeight: 600,
                     fontSize: "0.85rem",
                     textDecoration: "none",

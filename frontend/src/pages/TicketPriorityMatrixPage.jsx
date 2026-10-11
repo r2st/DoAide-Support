@@ -14,13 +14,13 @@ const DEFAULT_MATRIX = {
   "High-Critical": { priority: "P1", label: "Emergency", color: "#EF4444", response: "15 min", resolution: "4 hours" },
   "High-High": { priority: "P2", label: "High", color: "#F97316", response: "1 hour", resolution: "8 hours" },
   "High-Medium": { priority: "P2", label: "High", color: "#F97316", response: "1 hour", resolution: "8 hours" },
-  "High-Low": { priority: "P3", label: "Medium", color: "#F0B429", response: "4 hours", resolution: "24 hours" },
+  "High-Low": { priority: "P3", label: "Medium", color: "#0D9488", response: "4 hours", resolution: "24 hours" },
   "Medium-Critical": { priority: "P2", label: "High", color: "#F97316", response: "1 hour", resolution: "8 hours" },
   "Medium-High": { priority: "P2", label: "High", color: "#F97316", response: "1 hour", resolution: "8 hours" },
-  "Medium-Medium": { priority: "P3", label: "Medium", color: "#F0B429", response: "4 hours", resolution: "24 hours" },
+  "Medium-Medium": { priority: "P3", label: "Medium", color: "#0D9488", response: "4 hours", resolution: "24 hours" },
   "Medium-Low": { priority: "P4", label: "Low", color: "#22C55E", response: "8 hours", resolution: "72 hours" },
   "Low-Critical": { priority: "P2", label: "High", color: "#F97316", response: "1 hour", resolution: "8 hours" },
-  "Low-High": { priority: "P3", label: "Medium", color: "#F0B429", response: "4 hours", resolution: "24 hours" },
+  "Low-High": { priority: "P3", label: "Medium", color: "#0D9488", response: "4 hours", resolution: "24 hours" },
   "Low-Medium": { priority: "P4", label: "Low", color: "#22C55E", response: "8 hours", resolution: "72 hours" },
   "Low-Low": { priority: "P4", label: "Low", color: "#22C55E", response: "8 hours", resolution: "72 hours" },
 };
@@ -76,7 +76,7 @@ export default function TicketPriorityMatrixPage() {
               <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--color-text-secondary)" }}>Resolution</span>
               {["P1", "P2", "P3", "P4"].map((p) => (
                 <React.Fragment key={p}>
-                  <span style={{ fontSize: "0.85rem", fontWeight: 600, color: p === "P1" ? "#EF4444" : p === "P2" ? "#F97316" : p === "P3" ? "#F0B429" : "#22C55E" }}>{p}</span>
+                  <span style={{ fontSize: "0.85rem", fontWeight: 600, color: p === "P1" ? "#EF4444" : p === "P2" ? "#F97316" : p === "P3" ? "#0D9488" : "#22C55E" }}>{p}</span>
                   <input
                     className="calc-input"
                     style={{ padding: "0.4rem 0.6rem", fontSize: "0.85rem" }}
@@ -146,7 +146,7 @@ export default function TicketPriorityMatrixPage() {
             {[
               { p: "P1 — Emergency", color: "#EF4444", desc: "Service down or critical business function unavailable. Affects all or most users." },
               { p: "P2 — High", color: "#F97316", desc: "Major feature degraded or unavailable. Significant impact with no workaround." },
-              { p: "P3 — Medium", color: "#F0B429", desc: "Non-critical issue with a viable workaround. Limited user impact." },
+              { p: "P3 — Medium", color: "#0D9488", desc: "Non-critical issue with a viable workaround. Limited user impact." },
               { p: "P4 — Low", color: "#22C55E", desc: "Cosmetic issue, minor inconvenience, or general question." },
             ].map((item) => (
               <div key={item.p} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>

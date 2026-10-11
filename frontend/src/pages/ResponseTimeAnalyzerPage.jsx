@@ -13,7 +13,7 @@ const BENCHMARKS = {
 function getGrade(actual, benchmark) {
   if (actual <= benchmark.excellent) return { grade: "Excellent", color: "#22C55E" };
   if (actual <= benchmark.good) return { grade: "Good", color: "#84CC16" };
-  if (actual <= benchmark.acceptable) return { grade: "Acceptable", color: "#F0B429" };
+  if (actual <= benchmark.acceptable) return { grade: "Acceptable", color: "#0D9488" };
   return { grade: "Needs Improvement", color: "#EF4444" };
 }
 

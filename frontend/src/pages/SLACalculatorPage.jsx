@@ -102,7 +102,7 @@ export default function SLACalculatorPage() {
               <div className="calc-result">
                 <div className="calc-result-row calc-total">
                   <span>SLA Compliance Rate</span>
-                  <strong style={{ color: parseFloat(compliance) >= 95 ? "#22C55E" : parseFloat(compliance) >= 90 ? "#F0B429" : "#EF4444" }}>
+                  <strong style={{ color: parseFloat(compliance) >= 95 ? "#22C55E" : parseFloat(compliance) >= 90 ? "#0D9488" : "#EF4444" }}>
                     {compliance}%
                   </strong>
                 </div>

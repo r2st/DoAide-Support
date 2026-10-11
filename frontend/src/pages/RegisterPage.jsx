@@ -31,9 +31,8 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold mb-2">
-            <span className="text-rose-500">Do</span>
-            <span className="text-[var(--color-text)]">Aide</span>
-            <span className="text-[var(--color-text-secondary)] text-sm ml-1 font-normal">Support</span>
+            <span className="text-teal-600">DoAide</span>
+            <span className="text-[var(--color-text-secondary)] text-sm ml-2 font-normal">| Support</span>
           </h1>
           <p className="text-[var(--color-text-secondary)]">Create your account</p>
         </div>
@@ -50,7 +49,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-sm text-[var(--color-text-secondary)] mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="text-rose-500 hover:text-rose-400 font-medium">Sign in</Link>
+          <Link to="/login" className="text-teal-600 hover:text-teal-500 font-medium">Sign in</Link>
         </p>
       </div>
     </div>

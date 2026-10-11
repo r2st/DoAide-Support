@@ -10,7 +10,7 @@ export default function Tabs({ tabs, active, onChange }) {
           className={clsx(
             'px-4 py-2 text-sm font-medium transition-colors border-b-2 -mb-px',
             active === tab.key
-              ? 'border-rose-600 text-rose-500'
+              ? 'border-teal-600 text-teal-600'
               : 'border-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text)]'
           )}
         >

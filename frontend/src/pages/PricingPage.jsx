@@ -25,8 +25,8 @@ export default function PricingPage() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan) => (
-            <div key={plan.name} className={`p-8 rounded-xl border ${plan.featured ? 'border-rose-600 ring-1 ring-rose-600' : 'border-[var(--color-border)]'} bg-[var(--color-surface)]`}>
-              {plan.featured && <p className="text-xs font-semibold text-rose-500 uppercase mb-4">Most Popular</p>}
+            <div key={plan.name} className={`p-8 rounded-xl border ${plan.featured ? 'border-teal-600 ring-1 ring-teal-600' : 'border-[var(--color-border)]'} bg-[var(--color-surface)]`}>
+              {plan.featured && <p className="text-xs font-semibold text-teal-600 uppercase mb-4">Most Popular</p>}
               <h3 className="text-xl font-bold text-[var(--color-text)] mb-2">{plan.name}</h3>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-[var(--color-text)]">{plan.price}</span>
@@ -35,7 +35,7 @@ export default function PricingPage() {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                    <Check className="h-4 w-4 text-rose-500 flex-shrink-0" />
+                    <Check className="h-4 w-4 text-teal-600 flex-shrink-0" />
                     {f}
                   </li>
                 ))}

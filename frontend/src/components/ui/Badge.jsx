@@ -15,7 +15,7 @@ const colors = {
   draft: 'bg-gray-500/20 text-gray-400',
   published: 'bg-green-500/20 text-green-400',
   archived: 'bg-red-500/20 text-red-400',
-  default: 'bg-rose-500/20 text-rose-400',
+  default: 'bg-teal-500/20 text-teal-400',
 };
 
 export default function Badge({ status, className }) {

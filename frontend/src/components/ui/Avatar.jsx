@@ -9,7 +9,7 @@ export default function Avatar({ name, src, size = 'md', status }) {
       {src ? (
         <img src={src} alt={name} className={clsx('rounded-full object-cover', sizes[size])} />
       ) : (
-        <div className={clsx('rounded-full bg-rose-600/20 text-rose-400 flex items-center justify-center font-medium', sizes[size])}>
+        <div className={clsx('rounded-full bg-teal-600/20 text-teal-400 flex items-center justify-center font-medium', sizes[size])}>
           {initials}
         </div>
       )}

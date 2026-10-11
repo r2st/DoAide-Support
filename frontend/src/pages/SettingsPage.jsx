@@ -65,7 +65,7 @@ export default function SettingsPage() {
                   onClick={() => setTheme(t)}
                   className={`px-4 py-2 rounded-lg border text-sm capitalize ${
                     theme === t
-                      ? 'border-rose-600 bg-rose-600/10 text-rose-500'
+                      ? 'border-teal-600 bg-teal-600/10 text-teal-600'
                       : 'border-[var(--color-border)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)]'
                   }`}
                 >

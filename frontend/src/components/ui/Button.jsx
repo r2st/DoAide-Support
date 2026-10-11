@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { Loader2 } from 'lucide-react';
 
 const variants = {
-  primary: 'bg-rose-600 hover:bg-rose-700 text-white',
+  primary: 'bg-teal-600 hover:bg-teal-700 text-white',
   secondary: 'bg-[var(--color-surface)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text)] border border-[var(--color-border)]',
   outline: 'border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text)]',
   ghost: 'hover:bg-[var(--color-surface-hover)] text-[var(--color-text-secondary)]',

@@ -9,7 +9,7 @@ const Input = forwardRef(function Input({ label, error, icon: Icon, className, .
         <textarea
           ref={ref}
           className={clsx(
-            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-rose-600 focus:border-transparent resize-y min-h-[80px]',
+            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent resize-y min-h-[80px]',
             error && 'border-red-500',
             className
           )}
@@ -28,7 +28,7 @@ const Input = forwardRef(function Input({ label, error, icon: Icon, className, .
         <select
           ref={ref}
           className={clsx(
-            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-rose-600',
+            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-teal-600',
             className
           )}
           {...selectProps}
@@ -54,7 +54,7 @@ const Input = forwardRef(function Input({ label, error, icon: Icon, className, .
         <input
           ref={ref}
           className={clsx(
-            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-rose-600 focus:border-transparent',
+            'w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent',
             Icon ? 'pl-9 pr-3' : 'px-3',
             error && 'border-red-500',
             className

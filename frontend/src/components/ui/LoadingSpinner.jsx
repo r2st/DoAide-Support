@@ -5,7 +5,7 @@ export default function LoadingSpinner({ size = 'md', className }) {
 
   return (
     <div className={clsx('flex items-center justify-center', className)}>
-      <div className={clsx('animate-spin rounded-full border-2 border-rose-600 border-t-transparent', sizes[size])} />
+      <div className={clsx('animate-spin rounded-full border-2 border-teal-600 border-t-transparent', sizes[size])} />
     </div>
   );
 }

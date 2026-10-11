@@ -51,7 +51,7 @@ export default function DashboardPage() {
     { label: 'Open Tickets', value: stats.open, icon: Ticket, color: 'text-blue-400' },
     { label: 'Avg Response', value: `${stats.avgResponse.toFixed(1)}h`, icon: Clock, color: 'text-yellow-400' },
     { label: 'Satisfaction', value: stats.satisfaction ? `${stats.satisfaction.toFixed(1)}/5` : 'N/A', icon: Star, color: 'text-green-400' },
-    { label: 'Tickets (30d)', value: stats.today, icon: TrendingUp, color: 'text-rose-400' },
+    { label: 'Tickets (30d)', value: stats.today, icon: TrendingUp, color: 'text-teal-400' },
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function DashboardPage() {
                 <XAxis dataKey="date" tick={{ fill: 'var(--color-text-secondary)', fontSize: 12 }} />
                 <YAxis tick={{ fill: 'var(--color-text-secondary)', fontSize: 12 }} />
                 <Tooltip contentStyle={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: '8px' }} />
-                <Line type="monotone" dataKey="count" stroke="#e11d48" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="count" stroke="#0D9488" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>

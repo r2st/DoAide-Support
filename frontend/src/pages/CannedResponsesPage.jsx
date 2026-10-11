@@ -83,7 +83,7 @@ export default function CannedResponsesPage() {
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <h4 className="text-sm font-medium text-[var(--color-text)]">{r.title}</h4>
-                  {r.shortcut && <p className="text-xs text-rose-400 font-mono">{r.shortcut}</p>}
+                  {r.shortcut && <p className="text-xs text-teal-600 font-mono">{r.shortcut}</p>}
                 </div>
                 <div className="flex items-center gap-1">
                   <button onClick={() => handleCopy(r.content)} className="p-1.5 hover:bg-[var(--color-surface-hover)] rounded"><Copy className="h-3.5 w-3.5 text-[var(--color-text-secondary)]" /></button>

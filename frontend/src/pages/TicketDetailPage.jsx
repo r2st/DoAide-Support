@@ -106,7 +106,7 @@ export default function TicketDetailPage() {
                 msg.sender_type === 'customer' ? 'bg-[var(--color-surface)] border border-[var(--color-border)]'
                 : msg.sender_type === 'ai' ? 'bg-purple-600/20 border border-purple-600/30'
                 : msg.is_internal ? 'bg-yellow-600/20 border border-yellow-600/30'
-                : 'bg-rose-600/20 border border-rose-600/30'
+                : 'bg-teal-600/20 border border-teal-600/30'
               }`}>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-xs font-medium capitalize text-[var(--color-text-secondary)]">
@@ -129,7 +129,7 @@ export default function TicketDetailPage() {
                   {cannedResults.map((cr) => (
                     <button key={cr.id} onClick={() => { setReply(cr.content); setCannedResults([]); setCannedQuery(''); }}
                       className="w-full text-left px-3 py-2 text-sm hover:bg-[var(--color-surface-hover)]">
-                      <span className="font-medium text-rose-400">{cr.shortcut}</span> — {cr.title}
+                      <span className="font-medium text-teal-600">{cr.shortcut}</span> — {cr.title}
                     </button>
                   ))}
                 </div>
@@ -139,7 +139,7 @@ export default function TicketDetailPage() {
               placeholder="Type your reply..."
               value={reply}
               onChange={(e) => setReply(e.target.value)}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-rose-600 min-h-[120px] resize-y"
+              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-teal-600 min-h-[120px] resize-y"
             />
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -165,7 +165,7 @@ export default function TicketDetailPage() {
               <div className="flex gap-2 mt-1 flex-wrap">
                 {['open', 'pending', 'resolved', 'closed'].map((s) => (
                   <button key={s} onClick={() => handleStatusChange(s)}>
-                    <Badge status={s} className={ticket.status === s ? 'ring-2 ring-rose-600' : 'opacity-50'} />
+                    <Badge status={s} className={ticket.status === s ? 'ring-2 ring-teal-600' : 'opacity-50'} />
                   </button>
                 ))}
               </div>

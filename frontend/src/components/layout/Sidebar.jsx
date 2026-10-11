@@ -31,9 +31,8 @@ export default function Sidebar() {
     <div className="flex flex-col h-full bg-[var(--color-surface)] border-r border-[var(--color-border)]">
       <div className="px-6 py-5 border-b border-[var(--color-border)]">
         <h1 className="text-xl font-bold">
-          <span className="text-rose-500">Do</span>
-          <span className="text-[var(--color-text)]">Aide</span>
-          <span className="text-[var(--color-text-secondary)] text-sm ml-1 font-normal">Support</span>
+          <span className="text-teal-600">DoAide</span>
+          <span className="text-[var(--color-text-secondary)] text-sm ml-2 font-normal">| Support</span>
         </h1>
       </div>
 
@@ -46,7 +45,7 @@ export default function Sidebar() {
             className={({ isActive }) => clsx(
               'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
               isActive
-                ? 'bg-rose-600/10 text-rose-500'
+                ? 'bg-teal-600/10 text-teal-600'
                 : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text)]'
             )}
           >

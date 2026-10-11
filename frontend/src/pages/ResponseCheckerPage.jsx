@@ -39,7 +39,7 @@ function scoreResponse(text) {
 }
 
 function ScoreBar({ label, value }) {
-  const color = value >= 70 ? "#22C55E" : value >= 40 ? "#F0B429" : "#EF4444";
+  const color = value >= 70 ? "#22C55E" : value >= 40 ? "#0D9488" : "#EF4444";
   return (
     <div style={{ marginBottom: "0.75rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.25rem" }}>
@@ -94,7 +94,7 @@ export default function ResponseCheckerPage() {
             {result && (
               <div className="calc-result" aria-live="polite">
                 <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                  <span style={{ fontSize: "2rem", fontWeight: 700, color: result.overall >= 70 ? "#22C55E" : result.overall >= 40 ? "#F0B429" : "#EF4444" }}>
+                  <span style={{ fontSize: "2rem", fontWeight: 700, color: result.overall >= 70 ? "#22C55E" : result.overall >= 40 ? "#0D9488" : "#EF4444" }}>
                     {result.overall}
                   </span>
                   <span style={{ fontSize: "0.9rem", color: "#9CA3AF" }}> / 100 overall</span>
@@ -105,8 +105,8 @@ export default function ResponseCheckerPage() {
                 <ScoreBar label="Empathy" value={result.empathy} />
 
                 {result.tips.length > 0 && (
-                  <div style={{ marginTop: "1rem", padding: "0.75rem", borderRadius: "8px", background: "rgba(240,180,41,0.08)" }}>
-                    <strong style={{ fontSize: "0.85rem", color: "#F0B429", display: "block", marginBottom: "0.5rem" }}>Suggestions</strong>
+                  <div style={{ marginTop: "1rem", padding: "0.75rem", borderRadius: "8px", background: "rgba(13,148,136,0.08)" }}>
+                    <strong style={{ fontSize: "0.85rem", color: "#0D9488", display: "block", marginBottom: "0.5rem" }}>Suggestions</strong>
                     <ul style={{ margin: 0, paddingLeft: "1.25rem", fontSize: "0.85rem", color: "#9CA3AF" }}>
                       {result.tips.map((tip, i) => <li key={i} style={{ marginBottom: "0.35rem" }}>{tip}</li>)}
                     </ul>

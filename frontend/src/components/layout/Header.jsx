@@ -28,7 +28,7 @@ export default function Header({ title }) {
 
         <button className="relative p-2 rounded-lg hover:bg-[var(--color-surface-hover)] text-[var(--color-text-secondary)]">
           <Bell className="h-5 w-5" />
-          <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-rose-500" />
+          <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-teal-500" />
         </button>
 
         <button

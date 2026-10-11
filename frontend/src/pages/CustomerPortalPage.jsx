@@ -81,8 +81,8 @@ export default function CustomerPortalPage() {
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold mb-2">
-              <span className="text-rose-500">Do</span><span className="text-[var(--color-text)]">Aide</span>
-              <span className="text-[var(--color-text-secondary)] text-sm ml-1 font-normal">Customer Portal</span>
+              <span className="text-teal-600">DoAide</span>
+              <span className="text-[var(--color-text-secondary)] text-sm ml-2 font-normal">| Customer Portal</span>
             </h1>
             <p className="text-[var(--color-text-secondary)]">Track your support tickets</p>
           </div>
@@ -110,7 +110,7 @@ export default function CustomerPortalPage() {
           </div>
           <div className="space-y-3 mb-6">
             {(selectedTicket.messages || []).map((msg) => (
-              <div key={msg.id} className={`p-3 rounded-lg ${msg.sender_type === 'customer' ? 'bg-[var(--color-bg)]' : 'bg-rose-600/10'}`}>
+              <div key={msg.id} className={`p-3 rounded-lg ${msg.sender_type === 'customer' ? 'bg-[var(--color-bg)]' : 'bg-teal-600/10'}`}>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-xs font-medium capitalize text-[var(--color-text-secondary)]">{msg.sender_type}</span>
                   <span className="text-xs text-[var(--color-text-secondary)]">{format(new Date(msg.created_at), 'MMM d, HH:mm')}</span>
@@ -121,7 +121,7 @@ export default function CustomerPortalPage() {
           </div>
           {selectedTicket.status !== 'closed' && (
             <div className="flex gap-2">
-              <input value={reply} onChange={(e) => setReply(e.target.value)} placeholder="Type a reply..." className="flex-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-rose-600" />
+              <input value={reply} onChange={(e) => setReply(e.target.value)} placeholder="Type a reply..." className="flex-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-teal-600" />
               <Button onClick={handleReply}><Send className="h-4 w-4" /></Button>
             </div>
           )}

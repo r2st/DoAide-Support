@@ -113,7 +113,7 @@ export default function KnowledgeBasePage() {
               <textarea
                 value={form.content}
                 onChange={(e) => setForm({ ...form, content: e.target.value })}
-                className="w-full h-96 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] font-mono focus:outline-none focus:ring-2 focus:ring-rose-600 resize-y"
+                className="w-full h-96 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] font-mono focus:outline-none focus:ring-2 focus:ring-teal-600 resize-y"
               />
             </div>
           </div>
@@ -127,11 +127,11 @@ export default function KnowledgeBasePage() {
       <div className="w-48 flex-shrink-0 hidden lg:block space-y-2">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-sm font-semibold text-[var(--color-text-secondary)] uppercase">Categories</h3>
-          <button onClick={() => setShowCategoryModal(true)} className="text-rose-500 hover:text-rose-400"><Plus className="h-4 w-4" /></button>
+          <button onClick={() => setShowCategoryModal(true)} className="text-teal-600 hover:text-teal-500"><Plus className="h-4 w-4" /></button>
         </div>
-        <button onClick={() => setSelectedCategory('')} className={`w-full text-left px-3 py-2 rounded-lg text-sm ${!selectedCategory ? 'bg-rose-600/10 text-rose-500' : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)]'}`}>All</button>
+        <button onClick={() => setSelectedCategory('')} className={`w-full text-left px-3 py-2 rounded-lg text-sm ${!selectedCategory ? 'bg-teal-600/10 text-teal-600' : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)]'}`}>All</button>
         {categories.map((cat) => (
-          <button key={cat.id} onClick={() => setSelectedCategory(cat.id)} className={`w-full text-left px-3 py-2 rounded-lg text-sm ${selectedCategory === cat.id ? 'bg-rose-600/10 text-rose-500' : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)]'}`}>{cat.name}</button>
+          <button key={cat.id} onClick={() => setSelectedCategory(cat.id)} className={`w-full text-left px-3 py-2 rounded-lg text-sm ${selectedCategory === cat.id ? 'bg-teal-600/10 text-teal-600' : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)]'}`}>{cat.name}</button>
         ))}
       </div>
 
