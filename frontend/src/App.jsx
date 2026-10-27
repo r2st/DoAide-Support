@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/ui/LoadingSpinner';
@@ -38,6 +38,7 @@ import AICustomerSupportGuide from './pages/blog/AICustomerSupportGuide';
 import HelpdeskSoftwareIndiaGuide from './pages/blog/HelpdeskSoftwareIndiaGuide';
 import TicketManagementIndiaGuide from './pages/blog/TicketManagementIndiaGuide';
 import CustomerServiceEcommerceIndiaGuide from './pages/blog/CustomerServiceEcommerceIndiaGuide';
+import useSEO from './hooks/useSEO';
 
 function ProtectedRoute() {
   const { isAuthenticated, loading } = useAuth();
@@ -47,6 +48,7 @@ function ProtectedRoute() {
 }
 
 export default function App() {
+  useSEO(useLocation().pathname.replace(/\/+$/, '') || '/');
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
